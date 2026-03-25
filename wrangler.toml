@@ -1,5 +1,5 @@
 # 早睡雪峰 — Cloudflare Pages 配置
-name = "early-sleep-xuefeng"
+name = "go2sleep"
 compatibility_date = "2026-03-25"
 
 # Pages 配置
@@ -10,7 +10,7 @@ pages_build_output_dir = "site"
 # 然后将返回的 id 填入下方
 [[kv_namespaces]]
 binding = "CHECKIN_KV"
-id = "YOUR_KV_NAMESPACE_ID"
+id = "0f65b76c50434311b7551b3ebe28c201"
 
 # 环境变量（敏感信息请用 wrangler secret put AGENT_TOKEN 设置）
 # [vars]

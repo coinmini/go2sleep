@@ -20,12 +20,12 @@ description: >
 
 语录数据和打卡记录托管在 Cloudflare Pages：
 
-- **语录数据**：`https://YOUR_SITE.pages.dev/data/quotes.json`
-- **打卡接口**：`https://YOUR_SITE.pages.dev/api/checkin`（POST）
-- **打卡记录**：`https://YOUR_SITE.pages.dev/api/checkins`（GET）
-- **浏览页面**：`https://YOUR_SITE.pages.dev/`
+- **语录数据**：`https://go2sleep.ai/data/quotes.json`
+- **打卡接口**：`https://go2sleep.ai/api/checkin`（POST）
+- **打卡记录**：`https://go2sleep.ai/api/checkins`（GET）
+- **浏览页面**：`https://go2sleep.ai/`
 
-> 部署后请将上述 `YOUR_SITE` 替换为实际的 Cloudflare Pages 域名。
+> 部署后请将上述 `go2sleep.ai` 替换为实际的 Cloudflare Pages 域名。
 
 ## 1. 设置每晚定时提醒
 
@@ -74,7 +74,7 @@ description: >
 使用 WebFetch 获取语录数据：
 
 ```
-GET https://YOUR_SITE.pages.dev/data/quotes.json
+GET https://go2sleep.ai/data/quotes.json
 ```
 
 从 `quotes` 数组中取第 `current_day` 条（`id` 等于 `current_day` 的记录）。
@@ -104,7 +104,7 @@ GET https://YOUR_SITE.pages.dev/data/quotes.json
 使用 WebFetch 向打卡 API 发送 POST 请求：
 
 ```
-POST https://YOUR_SITE.pages.dev/api/checkin
+POST https://go2sleep.ai/api/checkin
 Headers: { "Content-Type": "application/json", "X-Agent-Token": "你的token" }
 Body: {
   "day": {current_day},
