@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>早睡雪峰 · 66天治愈计划</title>
+  <meta name="description" content="张雪峰老师语录 · 66天早睡习惯养成 · 治愈你的每一个夜晚">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+</head>
+<body>
+
+  <!-- 星光粒子背景 -->
+  <canvas id="starfield"></canvas>
+
+  <!-- 主容器 -->
+  <div class="container">
+
+    <!-- 语言切换 -->
+    <button id="lang-toggle" class="lang-toggle" title="Switch Language">EN</button>
+
+    <!-- 纪念区头部 -->
+    <header class="memorial-header">
+      <h1 data-i18n="title">早睡雪峰</h1>
+      <p class="subtitle" data-i18n="subtitle">66天治愈计划 · 养成早睡好习惯</p>
+      <div class="divider"></div>
+      <p class="memorial-line" data-i18n="memorial">纪念张雪峰老师（1984 — 2026.03.24）</p>
+    </header>
+
+    <!-- Tab 导航 + 送花（同一行） -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="quotes" data-i18n="tab_quotes">语录浏览</button>
+      <button class="tab-btn" data-tab="checkins" data-i18n="tab_checkins">打卡记录</button>
+      <div class="flower-inline">
+        <button class="flower-btn" id="flower-btn" title="献一朵花">🌸</button>
+        <span class="flower-count" id="flower-count">0</span>
+        <div class="flower-animation-container" id="flower-container"></div>
+      </div>
+    </nav>
+
+    <!-- 语录浏览区 -->
+    <section class="quote-section">
+      <div class="quote-card fade-in">
+        <p class="quote-day">第 1 / 66 天</p>
+        <p class="quote-text">加载中...</p>
+        <p class="quote-author">—— 张雪峰</p>
+        <p class="quote-reflection"></p>
+      </div>
+
+      <!-- 进度条 -->
+      <div class="progress-section">
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <p class="progress-text">0 / 66（0%）</p>
+      </div>
+
+      <!-- 导航按钮 -->
+      <div class="quote-nav">
+        <button class="nav-btn prev-btn" title="上一条">‹</button>
+        <button class="nav-btn random-btn" title="随机一条" data-i18n="random_btn">✦ 随机</button>
+        <button class="nav-btn next-btn" title="下一条">›</button>
+      </div>
+    </section>
+
+    <!-- 打卡记录区 -->
+    <section class="checkin-section">
+      <div class="checkin-summary">
+        <div class="checkin-count">0</div>
+        <div class="checkin-label" data-i18n="checkin_label">次提醒打卡</div>
+        <div class="checkin-streak" data-i18n="checkin_no_streak">暂无连续打卡</div>
+      </div>
+      <div class="divider"></div>
+      <ul class="checkin-list">
+        <li class="checkin-empty">还没有打卡记录，等待 Agent 的第一次提醒...</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- 背景音乐播放器 -->
+  <div class="music-player">
+    <button class="music-skip-btn" title="切换曲目">⟳</button>
+    <input type="range" class="volume-slider" min="0" max="100" value="30">
+    <button class="music-btn" title="播放/暂停背景音乐">♪</button>
+  </div>
+  <div class="music-title"></div>
+  <audio id="bgm" preload="auto"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>

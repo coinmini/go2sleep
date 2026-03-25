@@ -1,0 +1,607 @@
+{
+  "version": "1.0.0",
+  "total": 66,
+  "memorial": {
+    "name": "张雪峰",
+    "birth_year": 1984,
+    "death_date": "2026-03-24",
+    "age": 41,
+    "cause": "心源性猝死"
+  },
+  "quotes": [
+    {
+      "id": 1,
+      "text": "年轻就是资本，别在该奋斗的年纪选择安逸。",
+      "text_en": "Youth is your capital. Don't choose comfort at an age meant for striving.",
+      "source": "网易订阅",
+      "theme": "努力坚持",
+      "health_reflection": "奋斗的前提是有好身体，今晚早睡就是对明天最好的投资。",
+      "health_reflection_en": "A healthy body is the foundation of all striving. Going to bed early tonight is the best investment you can make for tomorrow."
+    },
+    {
+      "id": 2,
+      "text": "人生没有白走的路，每一步都算数。",
+      "text_en": "No path in life is walked in vain — every step counts.",
+      "source": "网易订阅",
+      "theme": "人生态度",
+      "health_reflection": "早睡的每一天也算数，66天后你会感谢今天的自己。",
+      "health_reflection_en": "Every night of early sleep counts too. In 66 days, you'll thank the person you are today."
+    },
+    {
+      "id": 3,
+      "text": "别以为自己已经很努力了，比你努力的人多得是。",
+      "text_en": "Don't think you're already working hard enough — plenty of people work even harder than you.",
+      "source": "搜狐网",
+      "theme": "努力坚持",
+      "health_reflection": "真正的努力包括管理好自己的作息，熬夜不是努力，是透支。",
+      "health_reflection_en": "True effort includes managing your sleep schedule. Staying up late isn't hard work — it's burning through your reserves."
+    },
+    {
+      "id": 4,
+      "text": "熬得住才能出众，否则就是平庸。",
+      "text_en": "Only those who endure can stand out; otherwise, you remain ordinary.",
+      "source": "搜狐网",
+      "theme": "努力坚持",
+      "health_reflection": "熬得住是指坚持，不是指熬夜。好的身体才能支撑长远的路。",
+      "health_reflection_en": "Enduring means persevering, not staying up all night. A healthy body is what carries you down the long road."
+    },
+    {
+      "id": 5,
+      "text": "学习是最简单的一项挑战。",
+      "text_en": "Studying is actually one of the simplest challenges you'll face.",
+      "source": "网易订阅",
+      "theme": "努力坚持",
+      "health_reflection": "早睡也是一项简单的挑战，难的是每天都坚持。",
+      "health_reflection_en": "Going to bed early is also a simple challenge — the hard part is doing it every single day."
+    },
+    {
+      "id": 6,
+      "text": "只有一条路不能选择——那就是放弃的路。",
+      "text_en": "There's only one path you must never choose — the path of giving up.",
+      "source": "搜狐网",
+      "theme": "人生态度",
+      "health_reflection": "别放弃早睡计划，坚持下去，你已经走了这么远。",
+      "health_reflection_en": "Don't give up on your early-sleep plan. Keep going — you've already come so far."
+    },
+    {
+      "id": 7,
+      "text": "强烈的信仰会赢取坚强的人，然后又使他们更坚强。",
+      "text_en": "A strong belief wins over strong people, and then makes them even stronger.",
+      "source": "搜狐网",
+      "theme": "人生态度",
+      "health_reflection": "相信早睡能改变生活，这个信念会让你越来越自律。",
+      "health_reflection_en": "Believe that early sleep can change your life — this conviction will make you more disciplined every day."
+    },
+    {
+      "id": 8,
+      "text": "若不给自己设限，则人生中就没有限制你发挥的藩篱。",
+      "text_en": "If you don't set limits for yourself, there are no barriers in life that can hold you back.",
+      "source": "搜狐网",
+      "theme": "人生态度",
+      "health_reflection": "给自己设一个限：今晚11点前入睡。好的习惯从设定边界开始。",
+      "health_reflection_en": "Set one limit for yourself: be asleep by 11 PM tonight. Good habits start with setting boundaries."
+    },
+    {
+      "id": 9,
+      "text": "人生道路中，平坦的道路往往是下坡，上坡总是艰难险阻的。",
+      "text_en": "In life, a smooth road is often a downhill slope; the uphill climb is always steep and difficult.",
+      "source": "句子控",
+      "theme": "人生态度",
+      "health_reflection": "改变作息习惯就是在走上坡路，辛苦但值得。",
+      "health_reflection_en": "Changing your sleep habits is an uphill climb — tough, but absolutely worth it."
+    },
+    {
+      "id": 10,
+      "text": "嘲讽是一种力量，消极的力量。赞扬也是一种力量，但却是积极的力量。",
+      "text_en": "Mockery is a kind of power — a negative one. Praise is also a kind of power — but a positive one.",
+      "source": "搜狐网",
+      "theme": "人生态度",
+      "health_reflection": "给自己一些正面的力量：你今天又坚持早睡了，很棒。",
+      "health_reflection_en": "Give yourself some positive energy: you stuck to your early bedtime again today. Well done."
+    },
+    {
+      "id": 11,
+      "text": "选择比努力更重要，但'有得选'的前提是你足够努力。",
+      "text_en": "Choosing wisely matters more than working hard, but having choices requires you to work hard enough first.",
+      "source": "搜狐网",
+      "theme": "人生规划",
+      "health_reflection": "选择早睡就是选择健康，这是最不需要门槛的正确选择。",
+      "health_reflection_en": "Choosing early sleep is choosing health — it's the right choice with the lowest barrier to entry."
+    },
+    {
+      "id": 12,
+      "text": "选对方向，事半功倍；选错方向，事倍功半。",
+      "text_en": "Choose the right direction and achieve twice the results with half the effort; choose wrong and it's the opposite.",
+      "source": "网易订阅",
+      "theme": "人生规划",
+      "health_reflection": "作息规律是人生效率的基石，方向对了，精力才够用。",
+      "health_reflection_en": "A regular sleep schedule is the cornerstone of life's efficiency. When the direction is right, your energy will follow."
+    },
+    {
+      "id": 13,
+      "text": "低头努力也要抬头看路，关键处就那么几步。",
+      "text_en": "Work hard with your head down, but look up to see the road — the critical moments are just a few steps.",
+      "source": "搜狐网",
+      "theme": "人生规划",
+      "health_reflection": "健康就是关键的那几步之一，别在最基础的地方栽跟头。",
+      "health_reflection_en": "Health is one of those critical steps. Don't stumble on the most fundamental one."
+    },
+    {
+      "id": 14,
+      "text": "看清现实不是悲观，是为了更好地出发。",
+      "text_en": "Seeing reality clearly isn't pessimism — it's preparation for a better start.",
+      "source": "网易订阅",
+      "theme": "人生规划",
+      "health_reflection": "看清熬夜的危害不是焦虑，是为了更清醒地珍惜身体。",
+      "health_reflection_en": "Recognizing the harm of staying up late isn't anxiety — it's a clear-eyed way of cherishing your body."
+    },
+    {
+      "id": 15,
+      "text": "考研不是唯一出路，但对普通人来说，是改变命运性价比最高的路。",
+      "text_en": "Graduate school isn't the only way out, but for ordinary people, it's the most cost-effective path to change your fate.",
+      "source": "搜狐网",
+      "theme": "考研学历",
+      "health_reflection": "早睡也是性价比最高的健康投资，零成本，回报巨大。",
+      "health_reflection_en": "Early sleep is also the most cost-effective health investment — zero cost, enormous returns."
+    },
+    {
+      "id": 16,
+      "text": "普通家庭选专业，优先选能吃饭的，情怀不能当饭吃。",
+      "text_en": "For ordinary families choosing a major, prioritize ones that put food on the table — passion doesn't pay the bills.",
+      "source": "搜狐网",
+      "theme": "考研学历",
+      "health_reflection": "同理，健康是一切的基础，没有好身体，什么都是空谈。",
+      "health_reflection_en": "By the same logic, health is the foundation of everything. Without a healthy body, everything else is just empty talk."
+    },
+    {
+      "id": 17,
+      "text": "实际上考研只是你人生道路上的一次考试而已，考上了当然好，考不上，人生还是要继续的。",
+      "text_en": "The graduate entrance exam is really just one test on your life's journey. Passing is great, but if you don't, life goes on.",
+      "source": "搜狐网",
+      "theme": "考研学历",
+      "health_reflection": "人生还要继续，所以别拿健康赌明天。今晚好好休息。",
+      "health_reflection_en": "Life must go on, so don't gamble your health on tomorrow. Get a good rest tonight."
+    },
+    {
+      "id": 18,
+      "text": "985/211是敲门砖，但能力才是铁饭碗。",
+      "text_en": "A degree from a top university is a foot in the door, but real ability is the iron rice bowl.",
+      "source": "搜狐网",
+      "theme": "考研学历",
+      "health_reflection": "学历是敲门砖，但健康才是地基。地基不牢，大厦将倾。",
+      "health_reflection_en": "Education opens doors, but health is the foundation. When the foundation is weak, the tower will crumble."
+    },
+    {
+      "id": 19,
+      "text": "别等大三才准备考研，大一开始规划都不算早。",
+      "text_en": "Don't wait until junior year to prepare for grad school — starting to plan as a freshman isn't too early.",
+      "source": "搜狐网",
+      "theme": "考研学历",
+      "health_reflection": "别等身体亮红灯才想起健康，从今晚开始早睡不算晚。",
+      "health_reflection_en": "Don't wait until your body sends warning signals to think about health. Starting to sleep early tonight is not too late."
+    },
+    {
+      "id": 20,
+      "text": "选对学校比读名校更重要，盲目冲名校就是自杀式报考。",
+      "text_en": "Choosing the right school matters more than chasing a prestigious one — blindly aiming for top schools is a suicide mission.",
+      "source": "新浪",
+      "theme": "考研学历",
+      "health_reflection": "盲目熬夜也是自杀式努力，找到适合自己的节奏更重要。",
+      "health_reflection_en": "Blindly staying up late is also a suicidal way of working hard. Finding your own rhythm matters more."
+    },
+    {
+      "id": 21,
+      "text": "选错专业，985变996；选错城市，才华变柴火；选错行业，青春变库存。",
+      "text_en": "Choose the wrong major and your elite degree becomes a 996 grind; wrong city and your talent becomes firewood; wrong industry and your youth becomes dead stock.",
+      "source": "搜狐网",
+      "theme": "专业选择",
+      "health_reflection": "选错作息，健康变负债。别让熬夜把你的青春变库存。",
+      "health_reflection_en": "Choose the wrong sleep schedule and your health becomes a liability. Don't let late nights turn your youth into dead stock."
+    },
+    {
+      "id": 22,
+      "text": "生化环材要慎重，不读硕博不要碰。",
+      "text_en": "Think twice before choosing biology, chemistry, environmental science, or materials — don't touch them unless you're going for a master's or PhD.",
+      "source": "网易订阅",
+      "theme": "专业选择",
+      "health_reflection": "熬夜也要慎重，不想进医院不要碰。",
+      "health_reflection_en": "Think twice about staying up late too — don't touch it unless you want a trip to the hospital."
+    },
+    {
+      "id": 23,
+      "text": "毕业即失业，不是因为你不行，是因为你没选对专业、没规划好。",
+      "text_en": "Graduating into unemployment isn't because you're incapable — it's because you chose the wrong major and didn't plan well.",
+      "source": "搜狐网",
+      "theme": "专业选择",
+      "health_reflection": "身体垮了不是因为你脆弱，是因为你没规划好作息。",
+      "health_reflection_en": "Your body breaking down isn't because you're fragile — it's because you didn't plan your sleep schedule well."
+    },
+    {
+      "id": 24,
+      "text": "先就业再择业，别眼高手低。",
+      "text_en": "Get a job first, then be picky — don't aim too high while your skills are too low.",
+      "source": "网易订阅",
+      "theme": "专业选择",
+      "health_reflection": "先早睡再谈效率，别总想着再熬一会儿。",
+      "health_reflection_en": "Go to bed early first, then talk about productivity. Stop telling yourself 'just a little longer.'"
+    },
+    {
+      "id": 25,
+      "text": "天才上大学是为了改变世界，普通人上大学是为了找份好工作，认清自己很重要。",
+      "text_en": "Geniuses go to college to change the world; ordinary people go to find a good job. Knowing yourself is crucial.",
+      "source": "知乎",
+      "theme": "人生规划",
+      "health_reflection": "认清自己的身体极限也很重要，别拿普通人的身体去拼天才的时间表。",
+      "health_reflection_en": "Knowing your body's limits is equally important. Don't push an ordinary body to keep a genius's schedule."
+    },
+    {
+      "id": 26,
+      "text": "家里没矿别谈理想，学习是老实人家孩子唯一的出路。",
+      "text_en": "If your family doesn't own a mine, don't talk about ideals — studying is the only way out for kids from ordinary families.",
+      "source": "搜狐网",
+      "theme": "家庭普通人",
+      "health_reflection": "家里没矿更要爱惜身体，健康是普通人最大的资本。",
+      "health_reflection_en": "If your family doesn't have wealth, take even better care of your body — health is an ordinary person's greatest asset."
+    },
+    {
+      "id": 27,
+      "text": "普通家庭的孩子，没有资格谈兴趣。你的兴趣，应该是先让自己活下来。",
+      "text_en": "Kids from ordinary families can't afford to talk about passion. Your interest should be surviving first.",
+      "source": "搜狐网",
+      "theme": "家庭普通人",
+      "health_reflection": "先让自己活得健康，才有资格谈未来。早睡是活下来的基本功。",
+      "health_reflection_en": "Live healthy first, then you can talk about the future. Early sleep is the most basic survival skill."
+    },
+    {
+      "id": 28,
+      "text": "出身寒门不可怕，可怕的是认命、不努力。",
+      "text_en": "Coming from a humble background isn't scary — what's scary is accepting your fate and not trying.",
+      "source": "搜狐网",
+      "theme": "家庭普通人",
+      "health_reflection": "作息不好不可怕，可怕的是认为改不了。今晚就是改变的开始。",
+      "health_reflection_en": "Having a bad sleep schedule isn't scary — what's scary is thinking you can't change it. Tonight is where the change begins."
+    },
+    {
+      "id": 29,
+      "text": "其实你在任何一个领域里边，熬个8年，熬个10年，一定是这个领域里的头部。",
+      "text_en": "If you persist in any field for 8 or 10 years, you'll definitely be among the top in that field.",
+      "source": "新浪",
+      "theme": "努力坚持",
+      "health_reflection": "前提是你的身体能撑住8年10年。别让熬夜缩短了你的赛道。",
+      "health_reflection_en": "The prerequisite is that your body can last 8 or 10 years. Don't let late nights shorten your runway."
+    },
+    {
+      "id": 30,
+      "text": "一定要珍惜河南同学，因为他干掉了很多人才来到你身边。",
+      "text_en": "Always cherish your classmates from Henan — they had to beat out so many people just to be by your side.",
+      "source": "网易订阅",
+      "theme": "家庭普通人",
+      "health_reflection": "也要珍惜自己的身体，它陪你干掉了那么多困难才走到今天。",
+      "health_reflection_en": "Cherish your body too — it has fought through so many hardships to carry you to where you are today."
+    },
+    {
+      "id": 31,
+      "text": "如果你的考研英语能拿到90分以上，我建议你去北京动物园租个摊位，供游客参观。",
+      "text_en": "If you can score above 90 on the graduate entrance English exam, I suggest you rent a booth at the Beijing Zoo for tourists to come see you.",
+      "source": "网易订阅",
+      "theme": "考研学历",
+      "health_reflection": "如果你能每天12点前睡觉坚持66天，你也值得被参观——因为太难得了。",
+      "health_reflection_en": "If you can go to bed before midnight for 66 straight days, you deserve to be a spectacle too — because that's incredibly rare."
+    },
+    {
+      "id": 32,
+      "text": "政治不会可以瞎乱写，英语作文可以抄阅读理解，数学大题不会只能写个解。",
+      "text_en": "If you don't know politics, you can still scribble something. For English essays, you can copy from reading comprehension. For math proofs you can't solve, all you can write is 'Solution:'.",
+      "source": "网易订阅",
+      "theme": "考研学历",
+      "health_reflection": "考试有技巧，但健康没有捷径，唯有规律作息才是正道。",
+      "health_reflection_en": "Exams have tricks, but health has no shortcuts. A regular sleep schedule is the only true path."
+    },
+    {
+      "id": 33,
+      "text": "北京给了我选择人生的底气。",
+      "text_en": "Beijing gave me the confidence to choose my own life.",
+      "source": "喜马拉雅",
+      "theme": "城市地域",
+      "health_reflection": "好的睡眠给你面对一切的底气。休息好了，明天才有底气。",
+      "health_reflection_en": "Good sleep gives you the confidence to face anything. Rest well, and you'll have the strength for tomorrow."
+    },
+    {
+      "id": 34,
+      "text": "超一线城市的机遇和见识是最多的，能在这些城市待下去的毕业生，就业前景不会太差。",
+      "text_en": "Top-tier cities offer the most opportunities and exposure. Graduates who can stay in these cities won't have bad career prospects.",
+      "source": "搜狐网",
+      "theme": "城市地域",
+      "health_reflection": "在大城市打拼更需要好体力，早睡是你最实在的竞争力。",
+      "health_reflection_en": "Hustling in a big city demands good stamina. Early sleep is your most practical competitive edge."
+    },
+    {
+      "id": 35,
+      "text": "大学在哪里，以后的就业极有可能就是在大学所在城市。",
+      "text_en": "Where you go to college is most likely where you'll end up working.",
+      "source": "搜狐网",
+      "theme": "城市地域",
+      "health_reflection": "你现在的作息习惯，极有可能就是你未来十年的作息。趁早改。",
+      "health_reflection_en": "Your current sleep habits will most likely be your habits for the next ten years. Change them while you can."
+    },
+    {
+      "id": 36,
+      "text": "劝人学医，天打雷劈。",
+      "text_en": "Advising someone to study medicine? You deserve to be struck by lightning.",
+      "source": "网易订阅",
+      "theme": "医学专业",
+      "health_reflection": "劝人熬夜，也该天打雷劈。今晚放下手机，早点睡吧。",
+      "health_reflection_en": "Advising someone to stay up late deserves the same lightning strike. Put down your phone tonight and sleep early."
+    },
+    {
+      "id": 37,
+      "text": "临床医学的坏处就是成长时间太长，孩子可能要经历的磨难特别多。",
+      "text_en": "The downside of clinical medicine is that it takes too long to grow — the hardships a student must endure are immense.",
+      "source": "网易订阅",
+      "theme": "医学专业",
+      "health_reflection": "成长需要时间，身体也需要时间恢复。每晚的睡眠就是身体的自我修复。",
+      "health_reflection_en": "Growth takes time, and so does your body's recovery. Every night of sleep is your body healing itself."
+    },
+    {
+      "id": 38,
+      "text": "医学专业有个非常重要的属性，就是成才时间特别长，家长需要做好至少十年支持的准备。",
+      "text_en": "Medicine has one crucial trait: it takes an exceptionally long time to mature. Parents need to be prepared to support their child for at least ten years.",
+      "source": "网易订阅",
+      "theme": "医学专业",
+      "health_reflection": "好习惯也需要时间养成，66天只是开始，但开始就是最难的部分。",
+      "health_reflection_en": "Good habits also take time to form. 66 days is just the beginning, but beginning is the hardest part."
+    },
+    {
+      "id": 39,
+      "text": "想学临床，家里一定要做好准备，35岁才可能养活自己。",
+      "text_en": "If you want to study clinical medicine, your family must be prepared — you might not be able to support yourself until age 35.",
+      "source": "网易订阅",
+      "theme": "医学专业",
+      "health_reflection": "想走远路，身体一定要做好准备。从今晚开始储蓄你的健康。",
+      "health_reflection_en": "If you want to go far, your body must be prepared. Start saving up your health from tonight."
+    },
+    {
+      "id": 40,
+      "text": "医学分口腔和临床，口腔本科就可以就业，临床必须读到博士。",
+      "text_en": "Medicine splits into dental and clinical tracks. Dental can get you a job with just a bachelor's; clinical requires a doctorate.",
+      "source": "网易订阅",
+      "theme": "医学专业",
+      "health_reflection": "人生有些事可以取巧，但睡眠不能。每天7-8小时是刚需，没有捷径。",
+      "health_reflection_en": "Some things in life can be shortcut, but sleep cannot. Seven to eight hours daily is non-negotiable — there are no shortcuts."
+    },
+    {
+      "id": 41,
+      "text": "人生成功路，志愿第一步。",
+      "text_en": "On the road to success, choosing your college application is the first step.",
+      "source": "新浪",
+      "theme": "人生规划",
+      "health_reflection": "人生健康路，早睡第一步。你今晚迈出的这一步很重要。",
+      "health_reflection_en": "On the road to health, early sleep is the first step. The step you take tonight matters greatly."
+    },
+    {
+      "id": 42,
+      "text": "我也相信爱可以排除万难；只是，万难之后，又有万难。",
+      "text_en": "I also believe love can conquer all obstacles — it's just that after those obstacles, there are always more.",
+      "source": "搜狐网",
+      "theme": "人生态度",
+      "health_reflection": "困难不会消失，但充足的睡眠给你面对万难的力量。",
+      "health_reflection_en": "Difficulties never disappear, but sufficient sleep gives you the strength to face them all."
+    },
+    {
+      "id": 43,
+      "text": "属于你的另一个全世界，终会以豁然开朗的姿态呈现。",
+      "text_en": "The whole new world that belongs to you will eventually reveal itself in a moment of clarity.",
+      "source": "搜狐网",
+      "theme": "人生态度",
+      "health_reflection": "好好休息，明天醒来的世界会更清晰、更豁然。",
+      "health_reflection_en": "Rest well, and the world you wake up to tomorrow will be clearer and more open."
+    },
+    {
+      "id": 44,
+      "text": "城市选择决定未来，这个道理很残酷。",
+      "text_en": "Your choice of city determines your future — this truth is brutal.",
+      "source": "搜狐网",
+      "theme": "城市地域",
+      "health_reflection": "作息选择也决定健康，这个道理同样残酷但真实。",
+      "health_reflection_en": "Your sleep choices also determine your health — this truth is equally brutal but real."
+    },
+    {
+      "id": 45,
+      "text": "一线城市或新一线城市往往是更为明智的选择。",
+      "text_en": "First-tier or emerging first-tier cities are often the wiser choice.",
+      "source": "搜狐网",
+      "theme": "城市地域",
+      "health_reflection": "在作息上，早睡早起往往是更为明智的选择。",
+      "health_reflection_en": "When it comes to your routine, early to bed and early to rise is often the wiser choice."
+    },
+    {
+      "id": 46,
+      "text": "普通家庭不求人，医学、军校、师范生。",
+      "text_en": "For ordinary families who don't want to depend on connections: medicine, military academies, or teaching programs.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "不求人的前提是自己靠得住，而靠得住的前提是身体好。",
+      "health_reflection_en": "Being self-reliant requires being dependable, and being dependable requires good health."
+    },
+    {
+      "id": 47,
+      "text": "毕业就想高薪起，名校电子通信、计算机。",
+      "text_en": "Want a high salary right after graduation? Go for electronics, telecommunications, or computer science at a top school.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "高薪需要高能量，高能量来自高质量的睡眠。",
+      "health_reflection_en": "High pay demands high energy, and high energy comes from high-quality sleep."
+    },
+    {
+      "id": 48,
+      "text": "如果不能名校见，尽量不进经管院。",
+      "text_en": "If you can't get into a top school, try to stay away from business and management programs.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "如果不能保证睡眠，尽量不要挑战身体极限。",
+      "health_reflection_en": "If you can't guarantee your sleep, try not to push your body to its limits."
+    },
+    {
+      "id": 49,
+      "text": "医学法学苦又累，心理提前做准备。",
+      "text_en": "Medicine and law are grueling — prepare yourself mentally in advance.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "人生苦又累的时候更要照顾好自己，睡眠是最好的心理准备。",
+      "health_reflection_en": "When life gets tough and exhausting, taking care of yourself matters even more. Sleep is the best mental preparation."
+    },
+    {
+      "id": 50,
+      "text": "孩子不经磨难无法独立，现在的啃老族多被家长过度保护。",
+      "text_en": "Children can't become independent without hardship. Today's adults living off their parents were often overprotected.",
+      "source": "句子控",
+      "theme": "教育孩子",
+      "health_reflection": "独立的第一步是学会管理自己的生活，包括按时睡觉。",
+      "health_reflection_en": "The first step toward independence is learning to manage your own life — including going to bed on time."
+    },
+    {
+      "id": 51,
+      "text": "与其说外面有坏人，不如教孩子遇到情况如何冷静应对。",
+      "text_en": "Rather than saying there are bad people out there, teach your child how to stay calm and handle situations.",
+      "source": "句子控",
+      "theme": "教育孩子",
+      "health_reflection": "与其说熬夜有害，不如从今天开始学会冷静地放下手机。",
+      "health_reflection_en": "Rather than saying staying up late is harmful, start learning to calmly put down your phone from today."
+    },
+    {
+      "id": 52,
+      "text": "所有孩子等父母一句道歉，所有父母等孩子一句谢谢。",
+      "text_en": "Every child waits for an apology from their parents; every parent waits for a thank you from their child.",
+      "source": "句子控",
+      "theme": "教育孩子",
+      "health_reflection": "对自己的身体说一句谢谢，然后让它好好休息一晚。",
+      "health_reflection_en": "Say thank you to your own body, then let it have a good night's rest."
+    },
+    {
+      "id": 53,
+      "text": "我们是否尊重孩子想法，不是把自以为是强加给孩子。",
+      "text_en": "Do we truly respect our children's thoughts, or are we just imposing our own views on them?",
+      "source": "句子控",
+      "theme": "教育孩子",
+      "health_reflection": "也请尊重身体发出的信号，它说累了，就让它休息。",
+      "health_reflection_en": "Please also respect the signals your body sends. When it says it's tired, let it rest."
+    },
+    {
+      "id": 54,
+      "text": "土木工程、工商管理、市场营销、食品科学工程、旅游管理都容易后悔。",
+      "text_en": "Civil engineering, business administration, marketing, food science, and tourism management — all easy to regret.",
+      "source": "搜狐网",
+      "theme": "专业选择",
+      "health_reflection": "长期熬夜也是一件容易后悔的事，趁还来得及，改变它。",
+      "health_reflection_en": "Staying up late long-term is also something you'll easily regret. While there's still time, change it."
+    },
+    {
+      "id": 55,
+      "text": "材料科学专业的本科就业率仅为58%。",
+      "text_en": "The undergraduate employment rate for materials science is only 58%.",
+      "source": "搜狐网",
+      "theme": "专业选择",
+      "health_reflection": "长期熬夜者的健康风险远高于58%，数据不会骗人。",
+      "health_reflection_en": "The health risk for chronic night owls is far higher than 58%. The numbers don't lie."
+    },
+    {
+      "id": 56,
+      "text": "富裕家庭继承人，金融、经济和经管。",
+      "text_en": "For heirs of wealthy families: finance, economics, and business management.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "不管什么家庭，健康都是你最宝贵的遗产。",
+      "health_reflection_en": "No matter what family you come from, health is your most precious inheritance."
+    },
+    {
+      "id": 57,
+      "text": "人工智能、大数据，名校才有好老师。",
+      "text_en": "For AI and big data, only top schools have the best teachers.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "再聪明的大脑也需要充足的睡眠来运转，早睡是给大脑最好的老师。",
+      "health_reflection_en": "Even the smartest brain needs adequate sleep to function. Early sleep is the best teacher for your brain."
+    },
+    {
+      "id": 58,
+      "text": "农林、地矿、石油类和土建，风雨野外常相见。",
+      "text_en": "Agriculture, forestry, mining, petroleum, and civil construction — expect to meet wind and rain in the field.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "无论在哪个行业，风雨中都需要一个强健的身体来支撑。",
+      "health_reflection_en": "No matter what industry you're in, you need a strong body to weather the storms."
+    },
+    {
+      "id": 59,
+      "text": "艺术费钱，讲天赋，毕业稀疏就业路，拼爹拼师拼运气。",
+      "text_en": "Art costs money, demands talent, offers sparse job prospects after graduation — it's all about connections, mentors, and luck.",
+      "source": "知乎",
+      "theme": "专业选择",
+      "health_reflection": "不管拼什么，健康是底牌。没有健康，运气来了也接不住。",
+      "health_reflection_en": "No matter what you're competing with, health is your trump card. Without health, you can't seize luck even when it comes."
+    },
+    {
+      "id": 60,
+      "text": "玩网络游戏的人其实都是在游戏中想办法成为自己在现实生活中成不了的那种人。",
+      "text_en": "People who play online games are really trying to become in the virtual world the person they can't be in real life.",
+      "source": "新浪",
+      "theme": "人生态度",
+      "health_reflection": "与其在虚拟世界逃避，不如在现实中好好睡一觉，明天做更好的自己。",
+      "health_reflection_en": "Rather than escaping into virtual worlds, get a good night's sleep in the real one and be a better version of yourself tomorrow."
+    },
+    {
+      "id": 61,
+      "text": "游戏最重要的不是画面做得多么酷炫，而是要将故事设计得足够吸引人。",
+      "text_en": "The most important thing about a game isn't how flashy the graphics are, but how compelling the story is.",
+      "source": "游民星空",
+      "theme": "人生态度",
+      "health_reflection": "人生也一样，重要的不是熬了多少夜，而是每一天活得有质量。",
+      "health_reflection_en": "Life is the same — what matters isn't how many nights you pulled, but whether each day is lived with quality."
+    },
+    {
+      "id": 62,
+      "text": "避免化学、生物、环境科学和材料科学，除非要追求博士学位。",
+      "text_en": "Avoid chemistry, biology, environmental science, and materials science — unless you're pursuing a doctorate.",
+      "source": "网易订阅",
+      "theme": "专业选择",
+      "health_reflection": "避免长期熬夜，除非你想追求去医院的学位。",
+      "health_reflection_en": "Avoid staying up late long-term — unless you're pursuing a degree in hospital visits."
+    },
+    {
+      "id": 63,
+      "text": "人生真好玩儿，下辈子还来。人活着就是为了体验那些你没有体验过的美好。",
+      "text_en": "Life is truly wonderful — I'd come back for another round. We live to experience all the beautiful things we haven't yet experienced.",
+      "source": "新浪财经《珍知灼见》栏目访谈",
+      "theme": "珍惜当下",
+      "health_reflection": "想体验更多美好，就要让身体撑得更久。今晚早睡，是为了明天更多的美好。",
+      "health_reflection_en": "To experience more beauty, you need your body to last longer. Sleeping early tonight is for more beauty tomorrow."
+    },
+    {
+      "id": 64,
+      "text": "我就想让我家人过好日子。但反过来想，如果把身体搞垮了，她们花谁的钱？那不叫过好日子，那叫受罪。",
+      "text_en": "All I want is for my family to live a good life. But think about it — if I wreck my health, whose money will they spend? That's not living well, that's suffering.",
+      "source": "2023年住院期间采访，网易等媒体报道",
+      "theme": "家人陪伴",
+      "health_reflection": "爱家人最好的方式，就是先爱惜自己的身体。早睡，也是对家人的承诺。",
+      "health_reflection_en": "The best way to love your family is to take care of your body first. Sleeping early is also a promise to those you love."
+    },
+    {
+      "id": 65,
+      "text": "如果选一种死法，我希望是猝死。抢救时千万别把我救过来，我终于可以休息了。",
+      "text_en": "If I could choose how to die, I'd choose sudden death. When they try to revive me, please don't bring me back — I can finally rest.",
+      "source": "微博及2023年住院期间言论，搜狐等媒体报道",
+      "theme": "休息警示",
+      "health_reflection": "这句玩笑话成了他最后的预言。别让休息变成奢望，今晚就好好睡吧。",
+      "health_reflection_en": "This joke became his final prophecy. Don't let rest become a luxury. Sleep well tonight."
+    },
+    {
+      "id": 66,
+      "text": "这可能是你们最后一次见到我，我都不敢保证明年你一定能见到我。",
+      "text_en": "This might be the last time you see me — I can't even guarantee you'll see me next year.",
+      "source": "2025年5月直播间，新浪新闻等报道",
+      "theme": "珍惜当下",
+      "health_reflection": "珍惜每一天，从珍惜每一晚的睡眠开始。晚安，六六大顺。",
+      "health_reflection_en": "Cherish every day, starting with cherishing every night of sleep. Good night, and may all 66 days bring you fortune."
+    }
+  ]
+}

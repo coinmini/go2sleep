@@ -1,0 +1,17 @@
+# 早睡雪峰 — Cloudflare Pages 配置
+name = "early-sleep-xuefeng"
+compatibility_date = "2026-03-25"
+
+# Pages 配置
+pages_build_output_dir = "site"
+
+# KV 命名空间绑定（部署前需要先创建 KV namespace）
+# 创建命令: wrangler kv namespace create CHECKIN_KV
+# 然后将返回的 id 填入下方
+[[kv_namespaces]]
+binding = "CHECKIN_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# 环境变量（敏感信息请用 wrangler secret put AGENT_TOKEN 设置）
+# [vars]
+# AGENT_TOKEN = "请勿在此明文存储，使用 wrangler secret put"
