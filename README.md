@@ -74,7 +74,7 @@ AI Agent 的 Skill 定义文件，教 Agent 每晚定时：
 │   ├── checkin.js                # Agent 打卡接口
 │   ├── checkins.js               # 打卡记录查询
 │   └── flowers.js                # 送花接口（IP 去重）
-├── skill/early-sleep-xuefeng/    # OpenClaw Skill
+├── skill/go2sleep/    # OpenClaw Skill
 │   ├── SKILL.md                  # Skill 定义
 │   └── references/
 └── wrangler.toml                 # Cloudflare 部署配置
@@ -122,7 +122,7 @@ https://go2sleep.ai/skill.md
 
 全部66条语录均来自张雪峰老师的公开社交媒体、直播、采访和演讲，有据可查。主要来源：搜狐网、网易订阅、新浪、知乎、句子控、喜马拉雅等。
 
-详见 [quotes-guide.md](skill/early-sleep-xuefeng/references/quotes-guide.md)。
+详见 [quotes-guide.md](skill/go2sleep/references/quotes-guide.md)。
 
 ## 许可
 

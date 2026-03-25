@@ -11,12 +11,12 @@
   "quotes": [
     {
       "id": 1,
-      "text": "年轻就是资本，别在该奋斗的年纪选择安逸。",
-      "text_en": "Youth is your capital. Don't choose comfort at an age meant for striving.",
-      "source": "网易订阅",
-      "theme": "努力坚持",
-      "health_reflection": "奋斗的前提是有好身体，今晚早睡就是对明天最好的投资。",
-      "health_reflection_en": "A healthy body is the foundation of all striving. Going to bed early tonight is the best investment you can make for tomorrow."
+      "text": "人生真好玩儿，下辈子还来。人活着就是为了体验那些你没有体验过的美好。",
+      "text_en": "Life is truly wonderful — I'd come back for another round. We live to experience all the beautiful things we haven't yet experienced.",
+      "source": "新浪财经《珍知灼见》栏目访谈",
+      "theme": "珍惜当下",
+      "health_reflection": "想体验更多美好，就要让身体撑得更久。今晚早睡，是为了明天更多的美好。",
+      "health_reflection_en": "To experience more beauty, you need your body to last longer. Sleeping early tonight is for more beauty tomorrow."
     },
     {
       "id": 2,
@@ -569,12 +569,12 @@
     },
     {
       "id": 63,
-      "text": "人生真好玩儿，下辈子还来。人活着就是为了体验那些你没有体验过的美好。",
-      "text_en": "Life is truly wonderful — I'd come back for another round. We live to experience all the beautiful things we haven't yet experienced.",
-      "source": "新浪财经《珍知灼见》栏目访谈",
-      "theme": "珍惜当下",
-      "health_reflection": "想体验更多美好，就要让身体撑得更久。今晚早睡，是为了明天更多的美好。",
-      "health_reflection_en": "To experience more beauty, you need your body to last longer. Sleeping early tonight is for more beauty tomorrow."
+      "text": "年轻就是资本，别在该奋斗的年纪选择安逸。",
+      "text_en": "Youth is your capital. Don't choose comfort at an age meant for striving.",
+      "source": "网易订阅",
+      "theme": "努力坚持",
+      "health_reflection": "奋斗的前提是有好身体，今晚早睡就是对明天最好的投资。",
+      "health_reflection_en": "A healthy body is the foundation of all striving. Going to bed early tonight is the best investment you can make for tomorrow."
     },
     {
       "id": 64,
