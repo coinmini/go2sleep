@@ -2,6 +2,8 @@
 
 > 纪念张雪峰老师（1984 — 2026.03.24）
 
+**https://go2sleep.ai/**
+
 ## 初衷
 
 2026年3月24日，张雪峰老师因心源性猝死离世，年仅41岁。
@@ -20,31 +22,44 @@
 
 ### 治愈系网站
 
-一个深色治愈风格的静态网站，用于浏览66条语录和查看打卡记录。
+访问 **https://go2sleep.ai/** ，一个治愈风格的夜间主题网站。
 
 - 星光粒子背景 + 毛玻璃卡片
 - 三首治愈背景音乐随机播放
 - 66条张雪峰真实语录（中英双语）
 - 送花互动（每人一次，表达纪念）
-- 打卡记录展示
+- Agent 打卡记录展示
 
 ### OpenClaw Skill
 
-一个 AI Agent 的 Skill 定义文件，教 Agent 每晚定时：
+AI Agent 的 Skill 定义文件，教 Agent 每晚定时：
 
-1. 从网站拉取当天的语录
+1. 从 go2sleep.ai 拉取当天的语录
 2. 用温暖的方式提醒主人早睡
 3. 向网站打卡，记录提醒历史
 4. 追踪66天进度
 
-### 打卡 API
+### API
 
-基于 Cloudflare Workers + KV 的轻量 API：
+基于 Cloudflare Workers + KV 的轻量接口：
 
-- `POST /api/checkin` — Agent 打卡
-- `GET /api/checkins` — 获取打卡记录
-- `POST /api/flowers` — 访客送花
-- `GET /api/flowers` — 获取送花数量
+| 接口 | 方法 | 说明 |
+|------|------|------|
+| `https://go2sleep.ai/api/checkin` | POST | Agent 打卡（需 Token） |
+| `https://go2sleep.ai/api/checkins` | GET | 获取打卡记录 |
+| `https://go2sleep.ai/api/flowers` | POST | 访客送花（每人一次） |
+| `https://go2sleep.ai/api/flowers` | GET | 获取送花数量 |
+
+## 技术架构
+
+全部托管在 Cloudflare，零服务器成本：
+
+| 组件 | Cloudflare 服务 |
+|------|-----------------|
+| 静态网站 + 音乐 | Pages（全球 CDN） |
+| API 接口 | Pages Functions (Workers) |
+| 数据存储 | KV |
+| 域名 + SSL | DNS + 自动 HTTPS |
 
 ## 项目结构
 
@@ -53,43 +68,51 @@
 │   ├── index.html
 │   ├── style.css
 │   ├── app.js
-│   ├── assets/                   # 背景音乐
-│   └── data/quotes.json          # 66条语录数据
-├── functions/api/                # Cloudflare Workers API
-│   ├── checkin.js
-│   ├── checkins.js
-│   └── flowers.js
+│   ├── assets/                   # 三首治愈背景音乐
+│   └── data/quotes.json          # 66条语录数据（中英双语）
+├── functions/api/                # Cloudflare Pages Functions
+│   ├── checkin.js                # Agent 打卡接口
+│   ├── checkins.js               # 打卡记录查询
+│   └── flowers.js                # 送花接口（IP 去重）
 ├── skill/early-sleep-xuefeng/    # OpenClaw Skill
-│   ├── SKILL.md
+│   ├── SKILL.md                  # Skill 定义
 │   └── references/
-└── wrangler.toml                 # Cloudflare 配置
+└── wrangler.toml                 # Cloudflare 部署配置
 ```
 
 ## 部署
 
-### 1. 创建 KV 命名空间
+项目已部署在 Cloudflare Pages，如需自行部署：
 
 ```bash
+# 1. 安装 wrangler 并登录
+npm install -g wrangler
+wrangler login
+
+# 2. 创建 KV 命名空间
 wrangler kv namespace create CHECKIN_KV
+# 将返回的 ID 填入 wrangler.toml
+
+# 3. 创建 Pages 项目
+wrangler pages project create go2sleep --production-branch master
+
+# 4. 设置 Agent 打卡 Token
+wrangler pages secret put AGENT_TOKEN --project-name go2sleep
+
+# 5. 通过 CF API 绑定 KV 到 Pages Functions
+# Dashboard → Pages → go2sleep → Settings → Functions → KV namespace bindings
+# 绑定 CHECKIN_KV → 你的 namespace ID
+
+# 6. 部署
+wrangler pages deploy site/ --project-name go2sleep
+
+# 7. 绑定自定义域名
+# Dashboard → Pages → go2sleep → Custom domains → 添加域名
 ```
 
-将返回的 ID 填入 `wrangler.toml`。
+### 安装 Skill
 
-### 2. 设置 Agent Token
-
-```bash
-wrangler secret put AGENT_TOKEN
-```
-
-### 3. 部署到 Cloudflare Pages
-
-```bash
-wrangler pages deploy site/ --project-name early-sleep-xuefeng
-```
-
-### 4. 安装 Skill
-
-将 `skill/early-sleep-xuefeng/` 复制到你的 Agent skills 目录，并将 SKILL.md 中的 `YOUR_SITE` 替换为实际域名。
+将 `skill/early-sleep-xuefeng/` 复制到你的 Agent skills 目录即可。
 
 ## 语录来源
 
