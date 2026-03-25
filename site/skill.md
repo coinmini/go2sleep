@@ -100,8 +100,8 @@ GET https://go2sleep.ai/data/quotes.json
 
 💭 {quote.health_reflection}
 
-晚安。张雪峰老师41岁英年早逝，提醒我们：
-身体才是一切的本钱。今天是你坚持早睡的第 {current_day} 天。
+晚安。身体是一切的本钱。
+今天是你坚持早睡的第 {current_day} 天。
 
 [{'■' * done}{'□' * remaining}] {current_day}/66（{percentage}%）
 ```
