@@ -25,6 +25,8 @@ const I18N = Object.freeze({
     checkin_no_streak: '暂无连续打卡',
     checkin_streak: (n) => `连续打卡 ${n} 天`,
     checkin_empty: '还没有打卡记录，等待 Agent 的第一次提醒...',
+    checkin_back: '查看全部',
+    checkin_user_title: (name) => `${name} 的早睡之旅`,
     day_format: (day, total) => `第 ${day} / ${total} 天`,
     progress_format: (day, total, pct) => `${day} / ${total}（${pct}%）`,
     author: '—— 张雪峰',
@@ -42,6 +44,8 @@ const I18N = Object.freeze({
     checkin_no_streak: 'No streak yet',
     checkin_streak: (n) => `${n}-day streak`,
     checkin_empty: 'No check-ins yet. Waiting for the first agent reminder...',
+    checkin_back: 'View all',
+    checkin_user_title: (name) => `${name}'s Sleep Journey`,
     day_format: (day, total) => `Day ${day} / ${total}`,
     progress_format: (day, total, pct) => `${day} / ${total} (${pct}%)`,
     author: '— Zhang Xuefeng',
@@ -102,9 +106,12 @@ const loadQuotes = async () => {
   }
 };
 
-const loadCheckins = async () => {
+const loadCheckins = async (user) => {
   try {
-    const response = await fetch(`${CONFIG.API_BASE}/api/checkins`);
+    const url = user
+      ? `${CONFIG.API_BASE}/api/checkins?user=${encodeURIComponent(user)}`
+      : `${CONFIG.API_BASE}/api/checkins`;
+    const response = await fetch(url);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     return Object.freeze(data);
@@ -232,10 +239,12 @@ const renderCheckins = (data) => {
     .map((record) => {
       const date = new Date(record.reminded_at);
       const timeStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+      const nickname = record.nickname || 'anonymous';
+      const nicknameHtml = `<span class="checkin-item-nickname" data-user="${nickname}">${nickname}</span>`;
       return `
         <li class="checkin-item">
           <div class="checkin-item-header">
-            <span class="checkin-item-day">第 ${record.day}/66 天</span>
+            <span>${nicknameHtml} · <span class="checkin-item-day">第 ${record.day}/66 天</span></span>
             <span class="checkin-item-time">${timeStr}</span>
           </div>
           <div class="checkin-item-quote">「${record.quote_text}」</div>
@@ -243,6 +252,14 @@ const renderCheckins = (data) => {
       `;
     })
     .join('');
+
+  // 昵称点击事件 → 跳转个人页
+  listEl.querySelectorAll('.checkin-item-nickname').forEach((el) => {
+    el.addEventListener('click', () => {
+      const user = el.dataset.user;
+      navigateToUser(user);
+    });
+  });
 };
 
 // ========== Tab 切换 ==========
@@ -466,7 +483,63 @@ const init = async () => {
 
   // 异步加载送花数量和打卡记录
   initFlowers();
-  const checkinData = await loadCheckins();
+
+  // 检查 URL 参数是否指定了用户
+  const urlParams = new URLSearchParams(window.location.search);
+  const userParam = urlParams.get('user');
+
+  if (userParam) {
+    // 显示个人视图头部
+    const headerEl = document.getElementById('checkin-user-header');
+    const titleEl = document.getElementById('checkin-user-title');
+    if (headerEl && titleEl) {
+      titleEl.textContent = t('checkin_user_title', userParam);
+      headerEl.style.display = 'block';
+    }
+    switchTab('checkins');
+  }
+
+  // 绑定"查看全部"按钮
+  const backBtn = document.getElementById('checkin-back-btn');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => navigateToUser(null));
+  }
+
+  const checkinData = await loadCheckins(userParam || undefined);
+  state.set({
+    checkins: checkinData.records || [],
+    checkinSummary: { total: checkinData.total || 0, streak: checkinData.streak || 0 },
+  });
+  renderCheckins(checkinData);
+};
+
+// ========== 用户视图导航 ==========
+const navigateToUser = async (user) => {
+  // 更新 URL 参数（不刷新页面）
+  const url = new URL(window.location);
+  if (user) {
+    url.searchParams.set('user', user);
+  } else {
+    url.searchParams.delete('user');
+  }
+  window.history.pushState({}, '', url);
+
+  // 显示/隐藏个人视图头部
+  const headerEl = document.getElementById('checkin-user-header');
+  const titleEl = document.getElementById('checkin-user-title');
+
+  if (user && headerEl && titleEl) {
+    titleEl.textContent = t('checkin_user_title', user);
+    headerEl.style.display = 'block';
+  } else if (headerEl) {
+    headerEl.style.display = 'none';
+  }
+
+  // 切换到打卡 Tab
+  switchTab('checkins');
+
+  // 重新加载该用户的打卡记录
+  const checkinData = await loadCheckins(user || undefined);
   state.set({
     checkins: checkinData.records || [],
     checkinSummary: { total: checkinData.total || 0, streak: checkinData.streak || 0 },

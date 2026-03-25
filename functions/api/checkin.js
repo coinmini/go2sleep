@@ -1,7 +1,7 @@
 /**
  * POST /api/checkin — Agent 打卡接口
  *
- * 请求体: { day, quote_id, quote_text, reminded_at }
+ * 请求体: { day, quote_id, quote_text, reminded_at, nickname }
  * 响应:   { success: true, day, total }
  */
 export async function onRequestPost(context) {
@@ -35,7 +35,7 @@ export async function onRequestPost(context) {
     );
   }
 
-  const { day, quote_id, quote_text, reminded_at } = body;
+  const { day, quote_id, quote_text, reminded_at, nickname } = body;
 
   // 输入验证
   if (!day || !quote_id || !quote_text || !reminded_at) {
@@ -54,16 +54,20 @@ export async function onRequestPost(context) {
 
   try {
     // 写入打卡记录
+    const safeNickname = nickname ? String(nickname).slice(0, 20) : 'anonymous';
+
     const record = Object.freeze({
       day,
       quote_id,
       quote_text: String(quote_text).slice(0, 200),
       reminded_at,
+      nickname: safeNickname,
       created_at: new Date().toISOString(),
     });
 
+    // KV key 包含 nickname，支持多用户
     await env.CHECKIN_KV.put(
-      `checkin:${String(day).padStart(3, '0')}`,
+      `checkin:${safeNickname}:${String(day).padStart(3, '0')}`,
       JSON.stringify(record)
     );
 

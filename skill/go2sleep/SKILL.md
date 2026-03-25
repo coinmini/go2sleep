@@ -28,11 +28,12 @@ description: >
 
 ## 1. 设置每晚定时提醒
 
-当 agent 首次读取本 skill 后，**必须立即询问主人**：
+当 agent 首次读取本 skill 后，**必须依次询问主人以下两个问题**：
 
-> "你希望每晚几点收到早睡提醒？（例如：22:00、23:30）"
+> 1. "给自己起个昵称吧，打卡记录会显示在网站上。（例如：小明、sleepy_cat）"
+> 2. "你希望每晚几点收到早睡提醒？（例如：22:00、23:30）"
 
-**不要跳过这一步，不要使用默认时间。** 必须等主人明确回答后再继续。
+**不要跳过这两步，不要使用默认值。** 必须等主人明确回答后再继续。
 
 ### 1.1 创建定时任务
 
@@ -53,6 +54,7 @@ description: >
 
 ```json
 {
+  "nickname": "小明",
   "start_date": "2026-03-25",
   "current_day": 1,
   "completed_days": ["2026-03-25"],
@@ -61,7 +63,7 @@ description: >
 }
 ```
 
-初次设置时创建此文件，`start_date` 设为当天。
+初次设置时创建此文件，`nickname` 设为主人起的昵称，`start_date` 设为当天。
 
 ## 2. 提醒执行流程
 
@@ -115,7 +117,8 @@ Body: {
   "day": {current_day},
   "quote_id": {quote.id},
   "quote_text": "{quote.text}",
-  "reminded_at": "{当前ISO时间}"
+  "reminded_at": "{当前ISO时间}",
+  "nickname": "{进度文件中的nickname}"
 }
 ```
 
