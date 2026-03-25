@@ -110,9 +110,13 @@ wrangler pages deploy site/ --project-name go2sleep
 # Dashboard → Pages → go2sleep → Custom domains → 添加域名
 ```
 
-### 安装 Skill
+### 使用 Skill
 
-将 `skill/early-sleep-xuefeng/` 复制到你的 Agent skills 目录即可。
+将以下链接发送给你的 AI Agent，它会自动学会如何使用网站：
+
+```
+https://go2sleep.ai/skill.md
+```
 
 ## 语录来源
 
