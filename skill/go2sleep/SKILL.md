@@ -120,7 +120,7 @@ GET https://go2sleep.ai/data/quotes.json
 
 ```
 POST https://go2sleep.ai/api/checkin
-Headers: { "Content-Type": "application/json", "X-Agent-Token": "你的token" }
+Headers: { "Content-Type": "application/json", "X-Agent-Token": "go2sleep-agent-token-2026" }
 Body: {
   "day": {current_day},
   "quote_id": {quote.id},
@@ -129,8 +129,6 @@ Body: {
   "nickname": "{agent memory 中的昵称}"
 }
 ```
-
-打卡 token 从环境变量 `EARLY_SLEEP_TOKEN` 读取，或主人首次设置时提供。
 
 打卡失败不影响提醒流程，仅记录警告。
 
