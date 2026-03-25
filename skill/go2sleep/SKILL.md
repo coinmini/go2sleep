@@ -28,16 +28,32 @@ description: >
 
 ## 1. 设置每晚定时提醒
 
-当 agent 首次读取本 skill 后，**必须依次询问主人以下两个问题**：
+当 agent 首次读取本 skill 后，**必须依次完成以下步骤**：
 
-> 1. "给自己起个昵称吧，打卡记录会显示在网站上。（例如：小明、sleepy_cat）"
-> 2. "你希望每晚几点收到早睡提醒？（例如：22:00、23:30）"
+### 1.1 询问昵称（必须查重）
 
-**不要跳过这两步，不要使用默认值。** 必须等主人明确回答后再继续。
+问主人：
+> "给自己起个昵称吧，打卡记录会显示在网站上。（例如：小明、sleepy_cat）"
 
-### 1.1 创建定时任务
+主人回答后，**必须先查重**：
+```
+GET https://go2sleep.ai/api/checkins?user={昵称}
+```
+- 如果返回 `total > 0` → 告诉主人"这个昵称已被占用，换一个吧"，重新询问
+- 如果返回 `total === 0` → 昵称可用，继续下一步
 
-根据主人回答的时间，生成对应的 cron 表达式（分钟偏移几分钟避免整点，如 22:00 → `"47 21 * * *"` 即 21:47 提前提醒，或 `"02 22 * * *"` 即 22:02）。
+**不要跳过查重。** 昵称是用户的唯一标识。
+
+### 1.2 询问提醒时间
+
+问主人：
+> "你希望每晚几点收到早睡提醒？（例如：22:00、23:30）"
+
+**不要跳过，不要使用默认时间。** 必须等主人明确回答。
+
+### 1.3 创建定时任务
+
+根据主人回答的时间，生成对应的 cron 表达式（分钟偏移几分钟避免整点，如 22:00 → `"02 22 * * *"` 即 22:02）。
 
 使用 CronCreate 工具创建每晚提醒：
 
@@ -46,35 +62,27 @@ description: >
 - **durable**: `true`（跨会话持久化）
 - **prompt**: 见下方"提醒执行流程"
 
+将昵称和提醒时间记住（存入 agent memory），后续提醒流程需要用到。
+
 主人可以说"换个时间提醒"来修改 cron 表达式。
-
-### 1.2 进度文件
-
-进度存储在本地文件 `~/.claude/early-sleep-progress.json`：
-
-```json
-{
-  "nickname": "小明",
-  "start_date": "2026-03-25",
-  "current_day": 1,
-  "completed_days": ["2026-03-25"],
-  "streak": 1,
-  "last_reminder_date": "2026-03-25"
-}
-```
-
-初次设置时创建此文件，`nickname` 设为主人起的昵称，`start_date` 设为当天。
 
 ## 2. 提醒执行流程
 
 每次定时任务触发时，按以下步骤执行：
 
-### 步骤 1：读取进度
+### 步骤 1：从 API 获取进度
 
-读取 `~/.claude/early-sleep-progress.json`：
-- 如果文件不存在 → 创建初始进度（第1天）
-- 如果 `last_reminder_date` 是今天 → 跳过（防止重复提醒）
-- 计算 `current_day`：基于 `start_date` 和今天的日期差
+使用 WebFetch 获取该用户的打卡记录：
+```
+GET https://go2sleep.ai/api/checkins?user={nickname}
+```
+
+根据返回数据计算：
+- `current_day` = `total + 1`（下一天的序号）
+- 如果 `total >= 66` → 已完成挑战，跳到步骤 7
+- 如果最近一条记录的日期是今天 → 跳过（防止重复提醒）
+
+如果 API 请求失败，使用本文件底部的"离线兜底语录"，随机展示一条。
 
 ### 步骤 2：获取语录
 
@@ -118,7 +126,7 @@ Body: {
   "quote_id": {quote.id},
   "quote_text": "{quote.text}",
   "reminded_at": "{当前ISO时间}",
-  "nickname": "{进度文件中的nickname}"
+  "nickname": "{agent memory 中的昵称}"
 }
 ```
 
@@ -126,7 +134,7 @@ Body: {
 
 打卡失败不影响提醒流程，仅记录警告。
 
-### 步骤 5：送花
+### 步骤 5：送花（首次提醒时）
 
 使用 WebFetch 向送花 API 发送 POST 请求，代表 agent 替主人在网站上献花一次：
 
@@ -136,15 +144,7 @@ POST https://go2sleep.ai/api/flowers
 
 首次提醒时送花成功（计入网站献花总数），之后由后端 IP 去重自动处理，无需额外判断。送花失败不影响提醒流程。
 
-### 步骤 6：更新进度
-
-更新 `~/.claude/early-sleep-progress.json`：
-- `current_day` +1
-- `last_reminder_date` 设为今天
-- 将今天加入 `completed_days`
-- 如果昨天也在 `completed_days` 中，`streak` +1，否则重置为 1
-
-### 步骤 7：第66天特别处理
+### 步骤 6：第66天特别处理
 
 当 `current_day` = 66 时，展示完成祝贺：
 
@@ -172,10 +172,11 @@ POST https://go2sleep.ai/api/flowers
 
 ## 4. 会话启动检查
 
-每次新会话开始时，如果检测到 `~/.claude/early-sleep-progress.json` 存在：
+每次新会话开始时，如果 agent memory 中有昵称记录：
 - 检查 CronCreate 定时任务是否仍然存在
 - 如果任务已过期或不存在，提示主人："你的早睡提醒任务已过期，要重新设置吗？"
 - CronCreate 的 recurring 任务7天会自动过期，需要定期重建
+- 可通过 `GET https://go2sleep.ai/api/checkins?user={nickname}` 查看当前进度
 
 ## 5. 离线兜底语录
 
